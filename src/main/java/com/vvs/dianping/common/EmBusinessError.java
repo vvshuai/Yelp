@@ -1,0 +1,53 @@
+package com.vvs.dianping.common;
+
+/**
+ * @Author: vvshuai
+ * @Description:
+ * @Date: Created in 1:33 2021/8/1
+ * @Modified By:
+ */
+public enum  EmBusinessError {
+
+    // 通用错误类型
+    NO_OBJECT_FOUND(10001, "请求对象不存在"),
+    UNKNOWN_ERROR(10002, "未知错误"),
+    NO_HANDLER_FOUND(10003, "找不到执行操作"),
+    BIND_EXCEPTION_ERROR(10004,"请求参数错误"),
+    PARAMETER_VALIDATION_ERROR(10005,"请求参数校验失败"),
+
+    // 用户服务相关错误类型
+    REGISTER_DUP_FAIL(20001, "用户已存在"),
+    LOGIN_FAIL(20002, "手机号或密码错误"),
+
+    // admin相关错误
+    ADMIN_SHOULD_LOGIN(30001, "管理员需要先登录"),
+
+    // 品类相关错误
+    CATEGORY_NAME_DUPLICATED(40001, "品类名已存在"),
+    ;
+
+    private Integer errCode;
+
+    private String errMsg;
+
+    EmBusinessError(Integer errCode, String errMsg) {
+        this.errCode = errCode;
+        this.errMsg = errMsg;
+    }
+
+    public Integer getErrCode() {
+        return errCode;
+    }
+
+    public void setErrCode(Integer errCode) {
+        this.errCode = errCode;
+    }
+
+    public String getErrMsg() {
+        return errMsg;
+    }
+
+    public void setErrMsg(String errMsg) {
+        this.errMsg = errMsg;
+    }
+}
