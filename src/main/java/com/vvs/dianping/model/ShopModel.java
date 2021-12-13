@@ -143,6 +143,16 @@ public class ShopModel {
 
     private SellerModel sellerModel;
 
+    private Integer distance;
+
+    public Integer getDistance() {
+        return distance;
+    }
+
+    public void setDistance(Integer distance) {
+        this.distance = distance;
+    }
+
     public CategoryModel getCategoryModel() {
         return categoryModel;
     }

@@ -38,7 +38,7 @@ public class ShopCreateReq {
     @NotBlank(message = "地址不为空")
     private String address;
 
-    @NotBlank(message = "商家Id不为空")
+    @NotNull(message = "商家Id不为空")
     private Integer sellerId;
 
     @NotBlank(message = "图标不为空")

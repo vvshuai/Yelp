@@ -19,4 +19,6 @@ public interface CategoryService {
     CategoryModel get(Integer id);
 
     List<CategoryModel> selectAll();
+
+    Integer countAllCategory();
 }
